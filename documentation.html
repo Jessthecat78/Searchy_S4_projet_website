@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Searchy | Documentation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrapper">
+        <a class="brand" href="index.html">Searchy</a>
+        <nav aria-label="Navigation principale">
+          <ul class="nav-list">
+            <li><a class="nav-link" href="index.html">Accueil</a></li>
+            <li><a class="nav-link" href="avancement.html">Avancement</a></li>
+            <li><a class="nav-link active" href="documentation.html">Documentation</a></li>
+            <li><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="container">
+          <p class="tag">Guide d'utilisation</p>
+          <h1>Documentation de Searchy</h1>
+          <p class="lead">
+            Cette page présente comment utiliser Searchy : lancer le moteur, effectuer
+            une recherche et interpréter les résultats.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" style="padding-top: 0;">
+        <div class="container">
+          <h2>1. Lancer l'application</h2>
+          <p>
+            Depuis la racine du projet, compilez et lancez Searchy avec Cargo :
+          </p>
+          <pre class="code-block"><code>cargo run --release</code></pre>
+          <p>
+            L'interface s'ouvre avec les champs vides. Aucun dossier n'est encore
+            sélectionné et aucun résultat n'est affiché.
+          </p>
+          <figure class="screenshot-figure">
+            <img src="screen1.png" alt="Interface Searchy au lancement, champs vides" />
+            <figcaption>Interface au démarrage — aucun dossier indexé</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section" style="padding-top: 0;">
+        <div class="container">
+          <h2>2. Choisir un dossier et lancer une recherche</h2>
+          <p>
+            Cliquez sur <strong>Choisir dossier</strong> puis sur <strong>Indexer</strong>. Entrez ensuite vos mots-clés
+            dans le champ <em>Requête texte</em> et cliquez sur <strong>Rechercher</strong>.
+          </p>
+          <figure class="screenshot-figure">
+            <img src="screen2.png" alt="Dossier sélectionné, requête psychologie saisie, 2 résultats trouvés" />
+            <figcaption>Dossier indexé — requête « psychologie » saisie, 2 résultat(s) trouvé(s)</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section" style="padding-top: 0;">
+        <div class="container">
+          <h2>3. Lire les résultats</h2>
+          <p>
+            Chaque résultat affiche le chemin du fichier et son score de pertinence entre
+            crochets. Plus le score est élevé, plus le document correspond à la requête.
+            Cliquez sur un lien pour ouvrir le fichier directement.
+          </p>
+          <figure class="screenshot-figure">
+            <img src="screen3.png" alt="Résultats de la recherche psychologie avec scores [1.9163]" />
+            <figcaption>Résultats classés par score — cliquez sur un lien pour ouvrir le document</figcaption>
+          </figure>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>Searchy - Documentation et guide d'utilisation</p>
+      </div>
+    </footer>
+  </body>
+</html>
